@@ -1,0 +1,7 @@
+.DS_Store
+checkpoints/
+__pycache__/
+*/__pycache__/
+checkpoint.pth
+wandb/
+epoch_59.pth
