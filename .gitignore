@@ -5,3 +5,6 @@ __pycache__/
 checkpoint.pth
 wandb/
 epoch_59.pth
+wandb/
+**/*.pth
+**/*.t7

@@ -436,7 +436,7 @@ def get_dataloader(opt, train_dataset, test_dataset=None):
 
     if test_dataset is not None:
         test_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=opt.bs,sampler=test_sampler,
-                                                   shuffle=True, num_workers=int(opt.workers), drop_last=False)
+                                                   shuffle=False, num_workers=int(opt.workers), drop_last=False)
     else:
         test_dataloader = None
 

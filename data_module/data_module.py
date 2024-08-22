@@ -106,6 +106,9 @@ class PointCloudPartSegWhithSketch(data.Dataset):
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             image = Image.fromarray(image)
             image = transforms.Resize((224, 224))(image)
+            # image = transforms.RandomAffine(degrees=(-0, 0),translate=(0.2, 0.1), scale=(1, 1), shear=0, fill=(255, 255, 255))(image)
+            # image = transforms.functional.affine(image, angle=0, translate=(-20, -20),
+            #                                scale=1, shear=0, fill=(255, 255, 255))
             image = transforms.ToTensor()(image)
 
         return image
